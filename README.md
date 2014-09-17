@@ -18,7 +18,7 @@ Space complexity is O(mn), since both the initial board and the dynamic programm
 
 ## Implementation
 
-In order to store the table, Implemented a basic matrix class called Board, which encapsulates a vector<vector<int>>, and provides sevral public functions to access individual cells and print its contents. I originally used a vector<vector<bool>> because the STL optimizes these containers for speed, but eventually opted for an implementation with int so that I could do the dynamic programming procedure in place, without having to compute results in a new vector of vectors that might be 1000 by 1000. 
+In order to store the table, I implemented a basic matrix class called Board, which encapsulates a vector of int vectors, and provides an interface to access individual cells and print cell contents. I originally used a vector of bool vectors, because the STL optimizes these containers for speed, but eventually opted for an implementation with int so that I could do the dynamic programming procedure in place, without having to compute results in a new vector of vectors that might be 1000 by 1000. 
 
 While the dynamic programming is running, I keep a variable that stores the value of the largest square encounterd so far. With that result handy, I do a scan of the table just calculated and record the coordinates of every square with that value. From here, the procedure diverges into three cases.
 
