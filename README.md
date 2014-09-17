@@ -1,4 +1,4 @@
-# CS141 Extra Crediti Project Documentation
+# CS141 Extra Credit Project Documentation
 
 ## Algorithm Design
 
