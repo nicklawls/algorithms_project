@@ -4,9 +4,9 @@
 
 In the first stage, the algorithm uses dynamic programming to find the size of the largest square in the m by n circuit board B. We define T(i, j) to be the size of the square who's bottom right corner is the point (i, j), where i is the row and j is the column. We can see a clear recursive definition of T(i,j): if the square above, to the left, and diagonally up and left of it are filled, then the square at that point is of size one plus the smallest of those 3. The recurrence relation for the algorithm is as follows:
 
-T(i,j) = 0						if B[i,j] = 0
-T(i,j) = 1						if i or j = 0 and B[i,j] = 1
-T(i,j) = 1 + min(T(i-1,j-1), T(i, j-1), T(i-1,j))	otherwise
+* T(i,j) = 0						if B[i,j] = 0
+* T(i,j) = 1						if i or j = 0 and B[i,j] = 1
+* T(i,j) = 1 + min(T(i-1,j-1), T(i, j-1), T(i-1,j))	otherwise
 
 In the second stage, in order to maximize the size of the largest square not overlapping the largest, we must evaluate each instance of the largest size square and select the largest among squares that do not overlap it. 
 
